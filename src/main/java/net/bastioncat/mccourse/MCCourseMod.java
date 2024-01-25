@@ -1,5 +1,6 @@
 package net.bastioncat.mccourse;
 
+import net.bastioncat.mccourse.block.ModBlocks;
 import net.bastioncat.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -21,6 +22,6 @@ public class MCCourseMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
-
+		ModBlocks.registerModBlocks();
 	}
 }
