@@ -14,6 +14,9 @@ public class ModItems {
     public static final Item ORICHALCUM_NUGGET = registerItem("orichalcum_nugget",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
 
 
