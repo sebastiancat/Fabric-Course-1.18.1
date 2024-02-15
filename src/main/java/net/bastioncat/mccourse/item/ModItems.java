@@ -1,6 +1,7 @@
 package net.bastioncat.mccourse.item;
 
 import net.bastioncat.mccourse.MCCourseMod;
+import net.bastioncat.mccourse.item.custom.DowsingRodItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -17,7 +18,8 @@ public class ModItems {
     public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
-
+    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
 
 
     private static Item registerItem(String name, Item item) {
