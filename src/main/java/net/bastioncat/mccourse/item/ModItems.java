@@ -18,6 +18,9 @@ public class ModItems {
     public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
 
+    public static final Item TURNIP = registerItem("turnip",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE).food(ModFoodComponents.TURNIP)));
+
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
 
