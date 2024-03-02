@@ -1,7 +1,7 @@
 package net.bastioncat.mccourse.item.custom;
 
+import net.bastioncat.mccourse.util.ModTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -69,13 +69,7 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return
-                block == Blocks.COAL_ORE ||
-                block == Blocks.IRON_ORE ||
-                block == Blocks.COPPER_ORE ||
-                block == Blocks.DIAMOND_ORE ||
-                block == Blocks.EMERALD_ORE ||
-                block == Blocks.GOLD_ORE;
+        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
     }
 
 
