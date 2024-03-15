@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"net.bastioncat.mccourse.MCCourseMod"
+		],
+		"client": [
+			"net.bastioncat.mccourse.MCCourseClient"
 		]
 	},
 	"mixins": [
