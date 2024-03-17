@@ -1,13 +1,9 @@
 package net.bastioncat.mccourse.item;
 
 import net.bastioncat.mccourse.MCCourseMod;
-import net.bastioncat.mccourse.item.custom.DowsingRodItem;
-import net.bastioncat.mccourse.item.custom.ModAxeItem;
-import net.bastioncat.mccourse.item.custom.ModHoeItem;
-import net.bastioncat.mccourse.item.custom.ModPickaxeItem;
+import net.bastioncat.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
@@ -37,21 +33,21 @@ public class ModItems {
     public static final Item ORICHALCUM_PICKAXE = registerItem("orichalcum_pickaxe",
             new ModPickaxeItem(ModToolMaterial.ORICHALCUM, 1, 2f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
-
     public static final Item ORICHALCUM_AXE = registerItem("orichalcum_axe",
             new ModAxeItem(ModToolMaterial.ORICHALCUM, 3, 1f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
-
     public static final Item ORICHALCUM_HOE = registerItem("orichalcum_hoe",
             new ModHoeItem(ModToolMaterial.ORICHALCUM, 0, 0f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
-
     public static final Item ORICHALCUM_SHOVEL = registerItem("orichalcum_shovel",
             new ShovelItem(ModToolMaterial.ORICHALCUM, 1, 2f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
-
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword",
             new SwordItem(ModToolMaterial.ORICHALCUM, 3, 3f,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
+            new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
