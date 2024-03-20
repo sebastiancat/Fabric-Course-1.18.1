@@ -5,7 +5,6 @@ import net.bastioncat.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -43,7 +42,7 @@ public class ModItems {
             new ShovelItem(ModToolMaterial.ORICHALCUM, 1, 2f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
     public static final Item ORICHALCUM_SWORD = registerItem("orichalcum_sword",
-            new SwordItem(ModToolMaterial.ORICHALCUM, 3, 3f,
+            new ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 3, 3f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
