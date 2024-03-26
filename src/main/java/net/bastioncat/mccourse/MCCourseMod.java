@@ -1,6 +1,7 @@
 package net.bastioncat.mccourse;
 
 import net.bastioncat.mccourse.block.ModBlocks;
+import net.bastioncat.mccourse.enchantment.ModEnchantments;
 import net.bastioncat.mccourse.item.ModItems;
 import net.bastioncat.mccourse.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -24,6 +25,8 @@ public class MCCourseMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModEnchantments.registerModEnchantments();
 
 		ModRegistries.registerModStuffs();
 	}
