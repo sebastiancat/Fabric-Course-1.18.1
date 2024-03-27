@@ -10,7 +10,7 @@ public class ModRegistries {
     }
 
     private static void registerFuels() {
-        System.out.println("Registering Fuels for + " + MCCourseMod.Mod_ID);
+        System.out.println("Registering Fuels for " + MCCourseMod.Mod_ID);
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
 

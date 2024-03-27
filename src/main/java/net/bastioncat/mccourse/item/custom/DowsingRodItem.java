@@ -1,5 +1,7 @@
 package net.bastioncat.mccourse.item.custom;
 
+import net.bastioncat.mccourse.item.ModItems;
+import net.bastioncat.mccourse.util.InventoryUtil;
 import net.bastioncat.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.screen.Screen;
@@ -8,13 +10,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -34,8 +36,13 @@ public class DowsingRodItem extends Item {
                 Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 
                 if(isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked, player, blockBelow);
+                    outputValuableCoordinates(positionClicked.add(0, -i, 0), player, blockBelow);
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
+                        addNbtToDataTablet(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
+
                     break;
                 }
             }
@@ -52,8 +59,19 @@ public class DowsingRodItem extends Item {
         return super.useOnBlock(context);
     }
 
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("mccourse.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
+    }
+
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         if(Screen.hasShiftDown()) {
             tooltip.add(new TranslatableText("item.mccourse.dowsing_rod.tooltip.shift"));
         } else {
