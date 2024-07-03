@@ -1,0 +1,35 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mccourse:item/personal_speed_controller_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "mccourse:on": 1
+      },
+      "model": "mccourse:item/personal_speed_controller_1"
+    },
+    {
+      "predicate": {
+        "mccourse:on": 1,
+        "mccourse:speed": 0.5
+      },
+      "model": "mccourse:item/personal_speed_controller_2"
+    },
+    {
+      "predicate": {
+        "mccourse:on": 1,
+        "mccourse:speed": 0.75
+      },
+      "model": "mccourse:item/personal_speed_controller_3"
+    },
+    {
+      "predicate": {
+        "mccourse:on": 1,
+        "mccourse:speed": 1
+      },
+      "model": "mccourse:item/personal_speed_controller_4"
+    }
+  ]
+}

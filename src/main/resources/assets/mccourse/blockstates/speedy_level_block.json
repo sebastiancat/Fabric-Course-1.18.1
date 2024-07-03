@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "speed=0": { "model": "mccourse:block/speedy_level_block_0" },
+    "speed=1": { "model": "mccourse:block/speedy_level_block_1" },
+    "speed=2": { "model": "mccourse:block/speedy_level_block_2" },
+    "speed=3": { "model": "mccourse:block/speedy_level_block_3" },
+    "speed=4": { "model": "mccourse:block/speedy_level_block_4" }
+  }
+}

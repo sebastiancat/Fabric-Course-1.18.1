@@ -5,7 +5,7 @@
 	"name": "MCCourse Fabric",
 	"description": "A mod based on a course by Kaupenjoe!",
 	"authors": [
-		"Bastioncat"
+		"Sebastiancat"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.bastioncat.mccourse.MCCourseMod"
+			"net.sebastiancat.mccourse.MCCourseMod"
 		],
 		"client": [
-			"net.bastioncat.mccourse.MCCourseClient"
+			"net.sebastiancat.mccourse.MCCourseClient"
 		]
 	},
 	"mixins": [

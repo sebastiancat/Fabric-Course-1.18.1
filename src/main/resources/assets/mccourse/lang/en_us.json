@@ -19,6 +19,7 @@
 
   "item.mccourse.orichalcum_horse_armor": "Oriclalcum Horse Armor",
   "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.personal_speed_controller": "Personal Speed Controller",
 
   "block.mccourse.orichalcum_block": "Orichalcum Block",
   "block.mccourse.orichalcum_ore": "Orichalcum Ore",
@@ -32,9 +33,10 @@
   "block.mccourse.orichalcum_fence": "Orichalcum Fence",
   "block.mccourse.orichalcum_fence_gate": "Orichalcum Fence Gate",
   "block.mccourse.orichalcum_wall": "Orichalcum Wall",
-  "block.mccourse.cherry_blossom_door": "Clerry Blossom Door",
-  "block.mccourse.cherry_blossom_trapdoor": "Clerry Blossom Trapdoor",
+  "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
+  "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
   "block.mccourse.orichalcum_lamp": "Orichalcum Lamp",
+  "block.mccourse.speedy_level_block": "Speedy Level Block",
 
   "itemGroup.mccourse.course": "Course Tab",
 
