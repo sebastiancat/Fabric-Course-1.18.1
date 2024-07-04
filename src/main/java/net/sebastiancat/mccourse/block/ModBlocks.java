@@ -65,7 +65,14 @@ public class ModBlocks {
     public static final Block SPEEDYLEVELBLOCK = registerBlock("speedy_level_block",
             new SpeedyLevelBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    public static final Block TURNIP_CROP = registerBlockWithoutBlockItem("turnip_crop",
+            new ModTurnipBlock(FabricBlockSettings.copy(Blocks.BEETROOTS)));
 
+
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(MCCourseMod.Mod_ID, name), block);
+    }
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

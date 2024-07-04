@@ -1,13 +1,11 @@
 package net.sebastiancat.mccourse.item;
 
+import net.minecraft.item.*;
 import net.sebastiancat.mccourse.MCCourseMod;
+import net.sebastiancat.mccourse.block.ModBlocks;
 import net.sebastiancat.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.HorseArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -72,6 +70,10 @@ public class ModItems {
 
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxCount(1)));
+
+    public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
+            new AliasedBlockItem(ModBlocks.TURNIP_CROP,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
 
 
     public static final Item PERSONAL_SPEED_CONTROLLER = registerItem("personal_speed_controller",
